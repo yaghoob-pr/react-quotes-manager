@@ -24,9 +24,7 @@ export const QuoteDetail = () => {
 
   const quote = loadedQuote;
 
-  if (!quote) {
-    return <h1>No Quote Found!</h1>;
-  }
+
 
   if (status === "pending") {
    return( <div className="centered">
@@ -38,7 +36,7 @@ export const QuoteDetail = () => {
     return <p className="centered">{error}</p>
   }
 
-  if(!quote) {
+  if(!quote.text) {
     return <p>No quote found!</p>
   }
 
